@@ -1,1 +1,205 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap");
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  max-width: 100%;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+img {
+  pointer-events: none;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.card-0 {
+  background: #fff;
+  border-radius: 7px;
+}
+.reading-block {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.main {
+  margin-top: 3vh;
+  margin: 2%;
+  width: 100%;
+}
+
+.card-1 {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #fff;
+}
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.box-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  /* font-family: Roboto, "Helvetica Neue", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.project-style-m1 {
+  height: 15vh;
+  width: 17vw;
+  margin: 1%;
+  cursor: pointer;
+  overflow: hidden;
+}
+.graph-style-m1 {
+  height: 40vh;
+  width: 620px;
+  margin-right: 4%;
+}
+
+.md-2 {
+  margin: 2%;
+}
+.pd-2 {
+  margin: 2%;
+}
+
+.md-0 {
+  margin: 0;
+}
+
+.container{
+  height:100%;
+  width:100%;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-end li {
+  background: gold;
+}
+
+.center {
+  justify-content: center;
+}
+.center li {
+  background: deepskyblue;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+.space-between li {
+  background: lightgreen;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+.space-around li {
+  background: hotpink;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+.space-evenly li {
+  background: #bada55;
+}
+.flex-horizontal {
+  flex-direction: row;
+}
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 250px;
+  height: 120px;
+  margin: 5px;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    margin-top: 3vh;
+    margin-left: 12%;
+    width: 100%;
+  }
+  .home-style {
+    margin-top: 1.5vh;
+  }
+
+  .graph-style-m1 {
+    height: 30vh;
+    width: 90vw;
+    margin-bottom: 3%;
+  }
+  .project-style-m1 {
+    height: 15vh;
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 37vw;
+    overflow: hidden;
+  }
+}

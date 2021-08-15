@@ -1,0 +1,35 @@
+<div class="flex-container">
+ <div style="display: block; width: 30%; ">
+  <canvas baseChart
+    [data]="pieChartDataClassI"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend">
+  </canvas>
+</div>
+
+<div style="display: block;width: 30%; ">
+  <canvas baseChart
+    [data]="pieChartDataClassII"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend">
+  </canvas>
+</div>
+
+<div style="display: block; width: 30%;">
+  <canvas baseChart
+    [data]="pieChartDataBMI"
+    [labels]="pieChartLabelsBMI"
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend">
+  </canvas>
+</div>
+
+</div>

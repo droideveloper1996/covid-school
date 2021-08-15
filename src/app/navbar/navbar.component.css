@@ -1,0 +1,24 @@
+.toolbar {
+  height: 10vh;
+  color: white;
+  padding: 1%;
+}
+.toolbar-icons {
+  margin-right: 1%;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar {
+  background-color: #3f51b5;
+}
+mat-icon {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .plan {
+    display: none;
+  }
+}

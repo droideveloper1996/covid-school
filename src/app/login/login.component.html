@@ -1,0 +1,25 @@
+    <!--Step 1 : Adding HTML-->
+    <form  #f="ngForm" (ngSubmit)="handleSubmit(f)">
+        <div class="imgcontainer">
+            <mat-icon
+                 alt="Avatar" class="avatar">
+                 health_and_safety
+            </mat-icon>
+        </div>
+
+        <div class="container">
+            <label><b>Username</b></label>
+            <input type="text"   [(ngModel)]="email" placeholder="Enter Username" name="uname" required>
+
+            <label><b>Password</b></label>
+            <input type="password" [(ngModel)]="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>

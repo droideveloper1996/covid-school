@@ -1,0 +1,60 @@
+<div class="flex-container">
+
+      <form  #f="ngForm" (ngSubmit)="handleSubmit(f)">
+        <div class="imgcontainer">
+            <mat-icon
+                 alt="Avatar" class="avatar">
+                 person
+            </mat-icon>
+        </div>
+
+        <div class="container">
+            <label><b>Fist Name</b></label>
+            <input type="text"   [(ngModel)]="mFirstName" placeholder="First Name" name="mFirstName" required>
+
+              <label><b>Last Name</b></label>
+            <input type="text"   [(ngModel)]="mLastName" placeholder="Last Name" name="mLastName" required>
+
+            <label><b>Mother Id</b></label>
+            <input type="text"   [(ngModel)]="mMotherID" placeholder="Last Name" name="mMotherID" required>
+
+            <label><b>Father Id</b></label>
+            <input type="text"   [(ngModel)]="mFatherID" placeholder="Last Name" name="mFatherId" required>
+
+             <label><b>Student Id Number</b></label>
+            <input type="text"   [(ngModel)]="mIdNumber" placeholder="Id Number" name="mIdNumber" required>
+
+              <label><b>Select class</b></label>
+              <select #sec [(ngModel)]="mClass" name="mClass">
+                <option  value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+
+              <br>
+              <label><b>Select Section</b></label>
+              <select [(ngModel)]="mSection" name="mSection">
+                <option  value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+
+              <br>
+               <label><b>Contact Number</b></label>
+            <input type="text"   [(ngModel)]="mPhone" placeholder="Phone Number" name="mPhone" required>
+
+              <label><b>Address</b></label>
+            <input type="text"   [(ngModel)]="mAddress" placeholder="Address" name="mAddress" required>
+
+            <button type="submit" style="background-color:blue">Register</button>
+            <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+    </form>
+
+</div>
