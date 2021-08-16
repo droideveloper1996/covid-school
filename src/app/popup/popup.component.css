@@ -1,11 +1,8 @@
-.flex-container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+.flex-container {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
 }
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;

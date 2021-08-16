@@ -52,6 +52,9 @@ import { VaccineComponent } from './vaccine/vaccine.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { ReportComponent } from './report/report.component';
 import { StudentComponent } from './student/student.component';
+import { PrincipalReportComponent } from './principal-report/principal-report.component';
+import { HealthCardComponent } from './health-card/health-card.component';
+import { PopupComponent } from './popup/popup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +66,9 @@ import { StudentComponent } from './student/student.component';
     BmiComponent,
     ReportComponent,
     StudentComponent,
+    PrincipalReportComponent,
+    HealthCardComponent,
+    PopupComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,166 @@
+<h2 *ngIf="isProfileView">Medical Report</h2>
+<h2 *ngIf="!isProfileView">Edit Medical Report</h2>
+
+<div class="flex-container">
+  <div class="student-profile" *ngIf="isProfileView">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="studentName">Student Name</label>
+          <input
+            type="text"
+            id="studentName"
+            disabled
+            [value]="student.mFirstName"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="studentName">Student ID</label>
+          <input
+            type="text"
+            id="studentName"
+            disabled
+            [value]="student.mIdNumber"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="studentName">Student Class</label>
+          <input
+            type="text"
+            id="studentName"
+            disabled
+            [value]="student.mClass"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="studentName">Vaccine Received</label>
+          <input
+            type="text"
+            id="studentName"
+            disabled
+            [value]="student.mFirstName"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="mAllergies">Allergies</label>
+          <input
+            type="text"
+            id="mAllergies"
+            disabled
+            value="No"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="weight">Chronological Disease</label>
+          <input
+            type="text"
+            id="weight"
+            disabled
+            value="No"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="mMedication">Medication</label>
+          <input
+            type="text"
+            id="mAllergies"
+            disabled
+            value="No"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="weight">Any Documents Submitted</label>
+          <input
+            type="text"
+            id="weight"
+            disabled
+            value="No"
+            class="form-control"
+          />
+        </div>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <th>Semester</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>BMI</th>
+        <th>Description</th>
+      </tr>
+      <tr *ngFor="let health of healthInfo">
+        <td>{{ health.sem }}</td>
+        <td>{{ health.height }}</td>
+        <td>{{ health.weight }}</td>
+        <td>{{ health.bmi }}</td>
+        <td>
+          <span *ngIf="student.bmi == 'severly_under_weight'"
+            >Severely Underweight</span
+          >
+          <span *ngIf="student.bmi == 'under_weight'">Underweight</span>
+          <span *ngIf="student.bmi == 'normal'">Normal</span>
+          <span *ngIf="student.bmi == 'over_weight'">Overweight</span>
+          <span *ngIf="student.bmi == 'severly_over_weight'"
+            >Severely Overweight</span
+          >
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="btn btn-primary" (click)="updateView()" *ngIf="isProfileView">
+    Update Data
+  </button>
+
+  <div *ngIf="!isProfileView">
+    <form #f="ngForm" (ngSubmit)="updateHealthData(f,student.mIdNumber)">
+      <div class="form-group">
+          <label for="">Semester</label>
+          <input type="text"  id="semester"  [(ngModel)]="semester" name='sem' class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="">Height</label>
+            <input type="text"  id="height" [(ngModel)]="height" name='height' class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="">Weight</label>
+            <input type="text"  id="weight" [(ngModel)]="weight" name='weight' class="form-control" />
+          </div>
+          <button class="btn btn-primary">Update Medical Logs</button>
+    </form>
+  </div>
+</div>

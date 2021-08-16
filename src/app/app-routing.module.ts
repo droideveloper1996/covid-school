@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BmiComponent } from "./bmi/bmi.component";
+import { HealthCardComponent } from './health-card/health-card.component';
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: "report", component: ReportComponent },
   { path: "bmi", component: BmiComponent },
   { path: "create", component: StudentComponent },
+  { path: "health-card", component: HealthCardComponent },
   { path: "**", component: NotfoundComponent },
 ];
 

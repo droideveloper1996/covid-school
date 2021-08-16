@@ -1,8 +1,17 @@
   /*set border to the form*/
 
+
+  .flex-container{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+  }
     form {
       width: 20%;
-      height: 30%;
+      height: 50%;
+      margin-top: 10%;
         border: 3px solid #f1f1f1;
     }
     /*assign full width inputs*/

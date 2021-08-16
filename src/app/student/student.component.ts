@@ -24,6 +24,7 @@ export class StudentComponent implements OnInit {
   mMotherID = "";
   mFatherID = "";
   ngOnInit(): void {}
+  
   handleSubmit(f: any) {
     this.service.addStudent(f.value).subscribe(
       (res) => {

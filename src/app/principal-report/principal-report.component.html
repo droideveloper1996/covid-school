@@ -1,28 +1,26 @@
 <div class="flex-container">
-
     <form #f="ngForm"  (ngSubmit)="handleSubmit(f)" *ngIf="!hasRetrieved">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Choose Class</label>
             <select class="form-control" id="mClass" [(ngModel)]="mClass" name="mClass">
-              <option selected>1</option>
-              <option>2</option>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
             </select>
           </div>
-          <!-- <div class="form-group">
-            <label for="exampleFormControlSelect1">Choose Grade</label>
-            <select class="form-control" id="mSection" [(ngModel)]=" mSection" name="mSection">
-              <option selected>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="mExtra" [(ngModel)]="mExtra" name="mExtra">
+              <option selected value="All">All</option>
+              <option value="Vaccinated">Vaccinated</option>
+              <option  value="Not vaccinated">Not Vaccinated</option>
+
             </select>
-          </div> -->
+          </div>
           <div class="form-group">
             <label for="exampleFormControlSelect1">Example select</label>
             <select class="form-control" id="mVaccineName" [(ngModel)]="mVaccineName" name="mVaccineName">
-              <option>MMRV</option>
-              <option>Tdap-IPV</option>
+              <option value="MMRV">MMRV</option>
+              <option value="Tdap-IPV">Tdap-IPV</option>
             </select>
           </div>
 
@@ -34,15 +32,17 @@
         <tr>
           <th>Student Name</th>
           <th>Student ID</th>
+          <th>Class</th>
           <th>Name of vaccine</th>
-          <th>Vaccinated Student</th>
+          <th>Vaccinated</th>
         </tr>
         <tr *ngFor="let student of students">
           <td>{{student.mFirstName}} {{student.mLastName}}</td>
           <td>{{student.mIdNumber}}</td>
-
-          <td>{{student.mVaccines[0].mVaccineName}} </td>
-          <td><input type="checkbox" [checked]="student.mIsVaccinated" (change)="updateVaccineState(student.mIdNumber,!student.mIsVaccinated)"></td>
+          <td>{{student.mClass}}</td>
+          <td>{{student.mVaccines[0].type}} </td>
+          <td> <div *ngIf="student.mIsVaccinated">Yes</div> <div *ngIf="!student.mIsVaccinated">No</div></td>
         </tr>
       </table>
+
 </div>
